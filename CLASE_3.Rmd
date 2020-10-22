@@ -1,0 +1,75 @@
+---
+title: "Untitled"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+LISTA <- 1:100
+
+LISTA[3]
+
+```
+
+```{r}
+iris
+```
+
+```{r}
+library (tidyverse)
+```
+
+```{r}
+glimpse(iris)
+```
+
+```{r}
+head(iris)
+tail(iris)
+```
+
+
+```{r}
+summary(iris)
+```
+
+```{r message=FALSE}
+iris$Sepal.Length
+
+```
+```{r}
+iris%>%
+  ggplot(aes(Petal.Length, fill=Species))+
+  geom_histogram()+facet_wrap(~Species, scales = "free")
+  labs(tittle='Datos Largos de los Petalos')
+```
+
+```{r}
+install.packages("skimr")
+```
+
+
+
+```{r}
+library(skimr)
+iris%>%
+  dplyr::group_by(Species)%>%
+  skim()
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
